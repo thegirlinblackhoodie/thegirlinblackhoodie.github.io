@@ -24,7 +24,7 @@ So I zoomed in, zoomed out, tilted, crouched, stood, sat, lay down, flipped my p
 
 The only thing left was doing a headstand. Which, honestly, I could've done, because my camera was in my glasses — my hands were free!
 
-Anyway, after this National Geographic moment, I decided to head home. Opened my phone — and **boom** — **no network**. Not "no internet," not "one bar." No. **No network. Period.**
+After this National Geographic moment, I decided to head home. Opened my phone — and **boom** — **no network**. Not "no internet," not "one bar." No. **No network. Period.**
 
 My heart sank. Slowly realized… **I was stranded.**
 

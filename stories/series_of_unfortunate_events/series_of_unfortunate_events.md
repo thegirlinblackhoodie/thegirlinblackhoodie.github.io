@@ -28,7 +28,7 @@ Spent thousands of dollars.
 
 Did a Master's in Artificial Intelligence.
 
-And now I'm doing the kind of work companies normally outsource to India.
+And now I'm doing the kind of work companies normally outsource.
 
 So basically, I just imported myself.
 

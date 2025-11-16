@@ -19,7 +19,5 @@ I didn’t want to give up, so I left it charging all night like it was on life 
 When I woke up, still dead.
 I tried one last time in the morning — and somehow, it worked! It came back to life.
 
-Guess I did get my Bollywood moment —
-just not the romantic kind where my dress gets stuck in someone’s watch.
-Mine was the full-on coma, CPR, and plot-twist revival.
+Guess, unexpectedly, I did get my Bollywood moment — just not the romantic kind where my dress gets stuck in someone's watch and I find my soulmate. Mine was with my phone - the full-on coma, CPR, and plot-twist revival!
 
