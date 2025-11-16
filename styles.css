@@ -289,6 +289,19 @@ body:has(.site-header) {
     min-height: 200px;
 }
 
+/* Act headings in stories */
+.story-content .act-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brunette-light);
+    margin: 2rem 0 1rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--brunette);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
 .story-images-wrapper {
     /* Images scroll with the story content */
 }

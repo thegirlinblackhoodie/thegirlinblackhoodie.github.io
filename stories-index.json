@@ -51,6 +51,31 @@
     ]
   },
   {
+    "folder": "california_chicago_chaos_1",
+    "filename": "california_chicago_chaos_1.html",
+    "title": "California -> Chicago -> Chaos",
+    "date": "2023-12-27",
+    "hashtags": [
+      "california",
+      "chicago",
+      "airlines",
+      "chaos",
+      "securitychecks",
+      "flight",
+      "sanfrancisco",
+      "weather",
+      "christmas",
+      "december"
+    ],
+    "images": [
+      "chicago_1.png",
+      "chicago_2.png",
+      "chicago_3.png",
+      "chicago_4.png",
+      "chicago_5.png"
+    ]
+  },
+  {
     "folder": "series_of_unfortunate_events",
     "filename": "series_of_unfortunate_events.html",
     "title": "A series of Unfortunate Events!",
