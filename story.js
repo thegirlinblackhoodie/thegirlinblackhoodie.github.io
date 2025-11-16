@@ -75,7 +75,13 @@ async function loadStory() {
         // Display story
         document.getElementById('storyTitle').textContent = story.title;
         
-        const date = new Date(story.date);
+        // Parse date string (YYYY-MM-DD) to avoid timezone issues
+        const dateParts = story.date.split('-');
+        const year = parseInt(dateParts[0], 10);
+        const month = parseInt(dateParts[1], 10) - 1; // Month is 0-indexed
+        const day = parseInt(dateParts[2], 10);
+        const date = new Date(year, month, day);
+        
         const formattedDate = date.toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'long', 
@@ -181,7 +187,12 @@ function displayHashtags(hashtags) {
 function updateSEO(story, storyFolder) {
     const baseUrl = 'https://thegirlinblackhoodie.github.io';
     const storyUrl = `${baseUrl}/story.html?story=${encodeURIComponent(storyFolder)}`;
-    const date = new Date(story.date);
+    // Parse date string (YYYY-MM-DD) to avoid timezone issues
+    const dateParts = story.date.split('-');
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1; // Month is 0-indexed
+    const day = parseInt(dateParts[2], 10);
+    const date = new Date(year, month, day);
     
     // Update page title
     document.title = `${story.title} - thegirlinblackhoodie`;

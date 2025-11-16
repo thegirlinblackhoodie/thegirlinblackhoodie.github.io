@@ -43,14 +43,27 @@ async function loadStories() {
         storiesList.innerHTML = '';
         
         // Sort stories by date (newest first)
-        stories.sort((a, b) => new Date(b.date) - new Date(a.date));
+        // Parse dates properly to avoid timezone issues
+        stories.sort((a, b) => {
+            const parseDate = (dateStr) => {
+                const parts = dateStr.split('-');
+                return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+            };
+            return parseDate(b.date) - parseDate(a.date);
+        });
         
         stories.forEach(story => {
             const storyCard = document.createElement('a');
             storyCard.href = `story.html?story=${encodeURIComponent(story.folder)}`;
             storyCard.className = 'story-card';
             
-            const date = new Date(story.date);
+            // Parse date string (YYYY-MM-DD) to avoid timezone issues
+            const dateParts = story.date.split('-');
+            const year = parseInt(dateParts[0], 10);
+            const month = parseInt(dateParts[1], 10) - 1; // Month is 0-indexed
+            const day = parseInt(dateParts[2], 10);
+            const date = new Date(year, month, day);
+            
             const formattedDate = date.toLocaleDateString('en-US', { 
                 year: 'numeric', 
                 month: 'long', 
