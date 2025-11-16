@@ -1,0 +1,4 @@
+title=Bar Hopping Gone Wrong
+hashtags=barhopping, idcard, exam
+date=02-08-2024
+
