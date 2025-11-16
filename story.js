@@ -109,6 +109,9 @@ async function loadStory() {
             displayHashtags(story.hashtags);
         }
         
+        // Update SEO meta tags and structured data
+        updateSEO(story, storyFolder);
+        
     } catch (error) {
         console.error('Error loading story:', error);
         const errorMsg = error.message || 'Unknown error';
@@ -142,11 +145,12 @@ async function loadStoryImages(storyFolder) {
             
             if (story && story.images && story.images.length > 0) {
                 // Create images gallery
-                const imagesHtml = story.images.map(imageName => {
+                const imagesHtml = story.images.map((imageName, index) => {
                     const imagePath = `/stories/${storyFolder}/images/${encodeURIComponent(imageName)}`;
+                    const altText = `${story.title} - Image ${index + 1}`;
                     return `
                         <div class="story-image-container">
-                            <img src="${imagePath}" alt="${imageName}" class="story-image" loading="lazy">
+                            <img src="${imagePath}" alt="${altText}" class="story-image" loading="lazy">
                         </div>
                     `;
                 }).join('');
@@ -171,6 +175,92 @@ function displayHashtags(hashtags) {
     const hashtagsList = hashtags.map(tag => `#${tag}`).join(' ');
     hashtagsSection.innerHTML = `<div class="hashtags-list">${hashtagsList}</div>`;
     hashtagsSection.style.display = 'block';
+}
+
+// Update SEO meta tags and structured data for story pages
+function updateSEO(story, storyFolder) {
+    const baseUrl = 'https://thegirlinblackhoodie.github.io';
+    const storyUrl = `${baseUrl}/story.html?story=${encodeURIComponent(storyFolder)}`;
+    const date = new Date(story.date);
+    
+    // Update page title
+    document.title = `${story.title} - thegirlinblackhoodie`;
+    
+    // Update meta description (first 160 chars of story content)
+    const contentText = document.getElementById('storyContent').textContent || story.title;
+    const description = contentText.substring(0, 160).replace(/\s+/g, ' ').trim() + '...';
+    
+    // Update meta tags
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) metaDescription.content = description;
+    
+    // Update Open Graph tags
+    const ogTitle = document.getElementById('og-title');
+    const ogDescription = document.getElementById('og-description');
+    const ogUrl = document.getElementById('og-url');
+    const ogImage = document.getElementById('og-image');
+    
+    if (ogTitle) ogTitle.content = story.title;
+    if (ogDescription) ogDescription.content = description;
+    if (ogUrl) ogUrl.content = storyUrl;
+    if (ogImage && story.images && story.images.length > 0) {
+        ogImage.content = `${baseUrl}/stories/${storyFolder}/images/${story.images[0]}`;
+    }
+    
+    // Update Twitter tags
+    const twitterTitle = document.getElementById('twitter-title');
+    const twitterDescription = document.getElementById('twitter-description');
+    const twitterUrl = document.getElementById('twitter-url');
+    const twitterImage = document.getElementById('twitter-image');
+    
+    if (twitterTitle) twitterTitle.content = story.title;
+    if (twitterDescription) twitterDescription.content = description;
+    if (twitterUrl) twitterUrl.content = storyUrl;
+    if (twitterImage && story.images && story.images.length > 0) {
+        twitterImage.content = `${baseUrl}/stories/${storyFolder}/images/${story.images[0]}`;
+    }
+    
+    // Update canonical URL
+    const canonical = document.getElementById('canonical');
+    if (canonical) canonical.href = storyUrl;
+    
+    // Add structured data (JSON-LD)
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": story.title,
+        "description": description,
+        "author": {
+            "@type": "Person",
+            "name": "thegirlinblackhoodie"
+        },
+        "datePublished": date.toISOString(),
+        "dateModified": date.toISOString(),
+        "publisher": {
+            "@type": "Person",
+            "name": "thegirlinblackhoodie"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": storyUrl
+        },
+        "url": storyUrl
+    };
+    
+    if (story.hashtags && story.hashtags.length > 0) {
+        structuredData.keywords = story.hashtags.join(', ');
+    }
+    
+    if (story.images && story.images.length > 0) {
+        structuredData.image = story.images.map(img => 
+            `${baseUrl}/stories/${storyFolder}/images/${img}`
+        );
+    }
+    
+    const structuredDataElement = document.getElementById('structured-data');
+    if (structuredDataElement) {
+        structuredDataElement.textContent = JSON.stringify(structuredData);
+    }
 }
 
 

@@ -127,9 +127,57 @@ function generateIndex() {
         stories.forEach(story => {
             console.log(`   - ${story.folder}: ${story.title}`);
         });
+        
+        // Also generate sitemap
+        generateSitemap(stories);
     } catch (error) {
         console.error('❌ Error generating index:', error);
         process.exit(1);
+    }
+}
+
+function generateSitemap(stories) {
+    try {
+        const sitemapPath = path.join(__dirname, 'sitemap.xml');
+        const baseUrl = 'https://thegirlinblackhoodie.github.io';
+        const currentDate = new Date().toISOString().split('T')[0];
+        
+        // Build sitemap XML
+        let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/stories.html</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`;
+
+        // Add each story
+        stories.forEach(story => {
+            const storyUrl = `${baseUrl}/story.html?story=${encodeURIComponent(story.folder)}`;
+            xml += `
+  <url>
+    <loc>${storyUrl}</loc>
+    <lastmod>${story.date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+        });
+
+        xml += `
+</urlset>
+`;
+
+        fs.writeFileSync(sitemapPath, xml, 'utf-8');
+        console.log(`✅ Also generated sitemap.xml`);
+    } catch (error) {
+        console.warn(`⚠️  Warning: Could not generate sitemap: ${error.message}`);
     }
 }
 

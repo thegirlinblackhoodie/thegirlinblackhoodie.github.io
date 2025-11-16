@@ -8,25 +8,32 @@ A dark-themed personal blog built for GitHub Pages, featuring stories with a cle
 - **Auto-Discovery**: New story files are automatically added to the blog
 - **Image Gallery**: Stories can include images displayed alongside the content
 - **Hashtags**: Stories support hashtags for categorization
+- **SEO Optimized**: Meta tags, Open Graph tags, structured data (JSON-LD), sitemap.xml, and robots.txt for better search engine visibility
 
 ## Adding New Stories
 
 To add a new story:
 
-1. Create a new markdown file in the `stories/` folder (e.g., `my-new-story.md`)
-2. Start the file with a title using markdown header format:
-   ```markdown
-   # Your Story Title
-   
-   Your story content here...
-   ```
+1. Create a new folder in the `stories/` directory (e.g., `my_new_story`)
+2. Inside the folder, create:
+   - A story file: `my_new_story.html` (or `.md` file)
+   - A `metadata.txt` file with:
+     ```
+     title=Your Story Title
+     date=2025-01-16
+     hashtags=tag1, tag2, tag3
+     ```
+   - An `images/` folder (optional) with story images (PNG format)
 3. Run the index generator script:
    ```bash
    node generate-stories-index.js
    ```
+   This will automatically:
+   - Generate `stories-index.json`
+   - Generate `sitemap.xml` for SEO
 4. Commit and push your changes:
    ```bash
-   git add stories/my-new-story.md stories-index.json
+   git add stories/my_new_story/ stories-index.json sitemap.xml
    git commit -m "Add new story: Your Story Title"
    git push
    ```
@@ -35,8 +42,18 @@ The story will automatically appear on the stories page!
 
 ## Story Format
 
-Stories should be written in markdown format:
+Stories can be written in HTML or Markdown format. HTML is preferred for better formatting control.
 
+**HTML Format** (recommended):
+```html
+<p>Your story content here. You can use paragraphs, and they will be automatically formatted.</p>
+
+<p>You can also add line breaks with &lt;br&gt; tags.</p>
+
+<p>And continue with more content...</p>
+```
+
+**Markdown Format**:
 ```markdown
 # Story Title
 
@@ -48,6 +65,15 @@ You can also use headers:
 
 And continue with more content...
 ```
+
+**Metadata Format** (`metadata.txt`):
+```
+title=Your Story Title
+date=2025-01-16
+hashtags=tag1, tag2, tag3
+```
+
+**Images**: Place PNG images in the `images/` folder. They will be automatically discovered and displayed alongside your story.
 
 ## Local Development
 
@@ -77,10 +103,16 @@ Then open `http://localhost:8000` in your browser.
 ├── stories.js              # Stories list functionality
 ├── story.js                # Story viewer
 ├── stories-index.json      # Auto-generated index of stories
-├── generate-stories-index.js  # Script to generate index
+├── sitemap.xml             # Auto-generated sitemap for SEO
+├── robots.txt              # Search engine crawler instructions
+├── generate-stories-index.js  # Script to generate index and sitemap
+├── generate-sitemap.js     # Standalone script to generate sitemap
 ├── logo.png                # Your logo
-└── stories/                # Story files folder
-    ├── placeholder-story.md
+└── stories/                # Story folders
+    ├── story-folder-1/
+    │   ├── story.html (or .md)
+    │   ├── metadata.txt
+    │   └── images/
     └── ... (your stories)
 ```
 
@@ -105,7 +137,22 @@ You can customize colors in `styles.css` by modifying the CSS variables:
 1. Go to your repository settings on GitHub
 2. Navigate to "Pages" in the sidebar
 3. Select the branch (usually `main`) and folder (`/ (root)`)
-4. Your site will be available at `https://yourusername.github.io/thegirlinblackhoodie.github.io/`
+4. Your site will be available at `https://thegirlinblackhoodie.github.io/`
+
+## SEO Features
+
+The blog includes comprehensive SEO optimization:
+
+- **Meta Tags**: Title, description, keywords, and author tags on all pages
+- **Open Graph Tags**: For better social media sharing (Facebook, LinkedIn, etc.)
+- **Twitter Cards**: Optimized previews when sharing on Twitter
+- **Structured Data**: JSON-LD schema for blog posts (Article schema)
+- **Sitemap**: Auto-generated `sitemap.xml` for search engine discovery
+- **Robots.txt**: Guides search engine crawlers
+- **Canonical URLs**: Prevents duplicate content issues
+- **Image Alt Text**: Descriptive alt text for better accessibility and SEO
+
+The sitemap is automatically regenerated when you run `generate-stories-index.js`.
 
 Enjoy sharing your stories! 📖
 
