@@ -209,34 +209,69 @@ body:has(.site-header) {
 }
 
 .story-card {
-    background: rgba(139, 111, 71, 0.1);
+    background: rgba(139, 111, 71, 0.08);
     border: 1px solid var(--brunette);
-    border-radius: 8px;
-    padding: 1.5rem;
+    border-radius: 12px;
+    padding: 2rem;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     color: var(--text-white);
     display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brunette), var(--brunette-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .story-card:hover {
-    background: rgba(139, 111, 71, 0.2);
+    background: rgba(139, 111, 71, 0.15);
     border-color: var(--brunette-light);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(139, 111, 71, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(139, 111, 71, 0.4);
+}
+
+.story-card:hover::before {
+    transform: scaleX(1);
 }
 
 .story-card h2 {
     color: var(--brunette-light);
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.story-card:hover h2 {
+    color: var(--brunette-light);
 }
 
 .story-card .story-date {
     color: var(--brunette);
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.story-card .story-hashtags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .story-card .story-excerpt {
@@ -338,6 +373,13 @@ body:has(.site-header) {
 
 
 .story-actions {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--brunette);
+}
+
+/* Disqus Comments Section */
+.disqus-section {
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--brunette);

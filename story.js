@@ -118,6 +118,9 @@ async function loadStory() {
         // Update SEO meta tags and structured data
         updateSEO(story, storyFolder);
         
+        // Initialize Disqus comments
+        initializeDisqus(story, storyFolder);
+        
     } catch (error) {
         console.error('Error loading story:', error);
         const errorMsg = error.message || 'Unknown error';
@@ -274,7 +277,45 @@ function updateSEO(story, storyFolder) {
     }
 }
 
-
+// Initialize Disqus comments with proper canonical URL and identifier
+function initializeDisqus(story, storyFolder) {
+    const baseUrl = 'https://thegirlinblackhoodie.github.io';
+    // Use canonical URL to prevent split threads (always use https and consistent format)
+    const canonicalUrl = `${baseUrl}/story.html?story=${encodeURIComponent(storyFolder)}`;
+    // Use the same URL as identifier for comment counts to work properly
+    // Disqus comment count script matches links by URL, so identifier should match URL
+    const pageIdentifier = canonicalUrl;
+    
+    // Configure Disqus with canonical URL and identifier
+    // This prevents split threads when the same content is accessed via different URLs
+    window.disqus_config = function () {
+        this.page.url = canonicalUrl; // Canonical URL (prevents http/https split threads)
+        this.page.identifier = pageIdentifier; // Use URL as identifier for comment counts
+        this.page.title = story.title;
+    };
+    
+    // Check if Disqus script is already loaded
+    const existingScript = document.querySelector('script[src*="disqus.com/embed.js"]');
+    
+    if (typeof DISQUS !== 'undefined') {
+        // Disqus is already loaded, reset it with new config
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.url = canonicalUrl;
+                this.page.identifier = pageIdentifier;
+                this.page.title = story.title;
+            }
+        });
+    } else if (!existingScript) {
+        // Load Disqus script dynamically with proper configuration
+        var d = document, s = d.createElement('script');
+        s.src = 'https://thegirlinblackhoodie.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    }
+    // If script exists but DISQUS is not defined yet, it will load with the config we just set
+}
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
