@@ -1,7 +1,7 @@
 # California -> Chicago -> Chaos
 I had a 10 a.m. flight from San Jose to Chicago — simple, straightforward, adulting-friendly plan.
 I woke up at 6 a.m., reached the airport by 8 a.m., got my bag checked in, passed security like a champion, and reached the gate feeling… accomplished.
-And that’s when the universe said, “Aww, cute. Let me ruin that.”
+And that’s when the universe said, “Awww, cute. Let me ruin that.”
 
 Act 1: The Pilot’s Confession Nobody Asked For
 The flight was delayed. Fine.
@@ -31,10 +31,10 @@ Perfect!
 I didn’t ask why.
  I should’ve asked why.
 Instead I said,
- “Direct flight? Great! Put me in the car, king.”
+ “Direct flight? Great!”
 This was my first red flag. I ignored it like a pro.
 
-Act 3: The Shuttle Ride Sponsored by Motion Sickness
+Act 3: The Shuttle Ride
 They put three of us into a car.
  San Jose → San Francisco normally takes 40 minutes.
 We reached it in less than 30 minutes.
@@ -53,7 +53,7 @@ Or the fiery depths below
 We weren’t judging — we’ve all sinned.
 By the time we arrived, we were just grateful to still be among the living.
 
-Act 4: Déjà Vu: Airport Edition
+Act 4: Red Flag Realization
 I rushed inside, checked my bag in again, did security again, and reached the gate.
 At this point I was starving. I ordered food… and while waiting:
 THE FLIGHT GOT DELAYED.
@@ -71,7 +71,7 @@ It was 1 p.m. now. I had been traveling since 6 a.m.
 I had successfully made a reverse road trip, somehow traveling further AWAY from Chicago.
 
 
-Act 5: The Emotional Damage Timeline
+Act 5: The Emotional Drain Timeline
 2 p.m. → delayed to 3
 
 

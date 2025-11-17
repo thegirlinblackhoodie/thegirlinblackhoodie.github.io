@@ -5,9 +5,9 @@ I was working from home, minding my own business, vibing in the comfort of my ro
 Meaning: the house was supposed to be empty.
 Meaning: this was not part of my work-from-home plan.
 
-My door was closed but not locked. So naturally, I tiptoed across the room and shut it quietly. I held my breath and listened. Another noise. My paranoia said: This is it. Today’s the day you go viral in a crime documentary.
+My door was closed but not locked. So naturally, I tiptoed across the room and lock it quietly. I held my breath and listened. Another noise. My paranoia said: This is it. Today’s the day you go viral in a crime documentary.
 
-For reasons still unknown to science, I decided to open the door and confront whoever was outside. Fight-or-flight? I chose “fight,” apparently. A brave move for someone whose entire upper-body strength comes from carrying grocery bags twice a month.
+For reasons still unknown, I decided to open the door and confront whoever was outside. Fight-or-flight? I chose “fight,” apparently. A brave move for someone whose entire upper-body strength comes from carrying grocery bags twice a month.
 
 I swung the door open dramatically.... and discovered I was holding a pillow. 
 

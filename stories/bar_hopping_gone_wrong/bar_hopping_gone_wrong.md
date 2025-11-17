@@ -6,7 +6,7 @@ Somewhere in that chaos, I forgot my ID card. At the first bar in downtown San J
 
 We hoped the bouncer wouldn’t notice that I did not look like her. Luckily, the man was older, tired, and spiritually done for the day. He checked the birth year, saw that “I” was over 21, and waved me in.
 
-The thrill?? INSANE. My heart was doing Zumba. I suddenly understood why people in movies make questionable decisions — the adrenaline is addictive.
+The thrill?? INSANE. I suddenly understood why people in movies make questionable decisions — the adrenaline is addictive.
 
 But then came Bar #2.
 
@@ -15,12 +15,10 @@ He looked at me. Then at the ID. Then back at me. And gave a smile that said, �
 
 Then he asked:  “What’s your birth date?”
 
-A kindergarten-level question. Except he didn’t want my birthdate — he wanted the one on the ID card, which I absolutely did not memorize. My brain chose that moment to become a blank Word document.
+A kindergarten-level question. Except he didn’t want my birthdate — he wanted the one on the ID card, which I absolutely did not memorize. I panicked. Absolutely malfunctioned. So I did the only thing my survival instincts offered: 
+I took the ID back from his hand and ran. Not in a straight line. Not with dignity. I sprinted in random directions, and my friends couldn’t even keep up with me.
 
-I panicked. Absolutely malfunctioned. So I did the only thing my survival instincts offered: 
-I took the ID back from his hand and ran. Not in a straight line. Not with dignity. I sprinted in random directions like a lost GPS signal, and my friends couldn’t even keep up with me.
-
-Eventually they had to call me to figure out where I’d disappeared because I was somewhere down the street, breathless, confused, and questioning my entire existence.
+Eventually they had to call me to figure out where I’d disappeared because I was somewhere down the street, breathless and confused.
 
 And that’s how I learned one very important lesson:
 Bar hopping is not for people who forget their ID.
