@@ -59,14 +59,16 @@ At this point I was starving. I ordered food… and while waiting:
 THE FLIGHT GOT DELAYED.
  Because of bad weather.
  Because OF COURSE.
-It was 1 p.m. now. I had been traveling since 6 a.m.
- From Sunnyvale → San Jose → San Francisco.
-I had successfully made a reverse road trip, somehow traveling further AWAY from Chicago.
+
 This is when I realized why everyone else refused the SFO option.
  They knew.
  THEY KNEW.
 But I?
  I was too optimistic. Too confident. Too… stupid.
+
+It was 1 p.m. now. I had been traveling since 6 a.m.
+ From Sunnyvale → San Jose → San Francisco.
+I had successfully made a reverse road trip, somehow traveling further AWAY from Chicago.
 
 
 Act 5: The Emotional Damage Timeline
@@ -77,7 +79,7 @@ Act 5: The Emotional Damage Timeline
 
 
 I aged approximately 6–10 years during this period.
-My friend texted asking what I wanted for dinner.
+My friend from Chicago texted asking what I wanted for dinner.
  I told her, very sincerely:
  “Just make rice and dal.”
 I was at “don’t-cook-too-much-I-might-not-survive-Californian-airports” level of despair.
