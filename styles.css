@@ -433,11 +433,6 @@ body:has(.site-header) {
     transform: scale(1.2);
 }
 
-.upvote-text {
-    font-weight: 500;
-    color: var(--brunette-light);
-}
-
 .upvote-count {
     font-weight: 600;
     color: var(--brunette-light);

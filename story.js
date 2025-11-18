@@ -118,8 +118,8 @@ async function loadStory() {
         // Update SEO meta tags and structured data
         updateSEO(story, storyFolder);
         
-        // Initialize upvote system
-        initializeUpvote(storyFolder);
+        // Initialize Firebase upvote system
+        initializeFirebaseUpvote(storyFolder);
         
     } catch (error) {
         console.error('Error loading story:', error);
@@ -277,45 +277,87 @@ function updateSEO(story, storyFolder) {
     }
 }
 
-// Initialize upvote system
-function initializeUpvote(storyFolder) {
+// Initialize Firebase upvote system
+function initializeFirebaseUpvote(storyFolder) {
     const upvoteButton = document.getElementById('upvoteButton');
     const upvoteCount = document.getElementById('upvoteCount');
     
     if (!upvoteButton || !upvoteCount) return;
     
-    // Get upvote count from localStorage
-    const storageKey = `upvotes_${storyFolder}`;
-    const hasUpvoted = localStorage.getItem(`upvoted_${storyFolder}`) === 'true';
-    let count = parseInt(localStorage.getItem(storageKey) || '0', 10);
-    
-    // Update UI
-    upvoteCount.textContent = count;
-    if (hasUpvoted) {
-        upvoteButton.classList.add('upvoted');
-        upvoteButton.disabled = true;
+    // Check if Firebase is configured
+    if (!window.firebaseConfig || !window.firebaseConfig.apiKey) {
+        console.warn('Firebase not configured. Upvote system disabled.');
+        upvoteButton.style.display = 'none';
+        return;
     }
     
-    // Handle upvote click
-    upvoteButton.addEventListener('click', function() {
-        if (hasUpvoted) return;
+    // Wait for Firebase to load
+    if (typeof firebase === 'undefined') {
+        setTimeout(() => initializeFirebaseUpvote(storyFolder), 100);
+        return;
+    }
+    
+    try {
+        // Initialize Firebase
+        if (!window.firebaseApp) {
+            window.firebaseApp = firebase.initializeApp(window.firebaseConfig);
+            window.firestore = firebase.firestore();
+        }
         
-        // Increment count
-        count++;
-        localStorage.setItem(storageKey, count.toString());
-        localStorage.setItem(`upvoted_${storyFolder}`, 'true');
+        const db = window.firestore;
+        const storyRef = db.collection('upvotes').doc(storyFolder);
         
-        // Update UI
-        upvoteCount.textContent = count;
-        upvoteButton.classList.add('upvoted');
-        upvoteButton.disabled = true;
+        // Check if user has already upvoted (using localStorage)
+        const hasUpvoted = localStorage.getItem(`upvoted_${storyFolder}`) === 'true';
         
-        // Add animation
-        upvoteButton.style.transform = 'scale(1.2)';
-        setTimeout(function() {
-            upvoteButton.style.transform = 'scale(1)';
-        }, 200);
-    });
+        // Load current upvote count and listen for real-time updates
+        storyRef.onSnapshot((doc) => {
+            let count = 0;
+            if (doc.exists) {
+                count = doc.data().count || 0;
+            }
+            upvoteCount.textContent = count;
+        }, (error) => {
+            console.error('Error loading upvotes:', error);
+        });
+        
+        // Set initial state
+        if (hasUpvoted) {
+            upvoteButton.classList.add('upvoted');
+            upvoteButton.disabled = true;
+        }
+        
+        // Handle upvote click
+        upvoteButton.addEventListener('click', function() {
+            if (hasUpvoted) return;
+            
+            // Increment count in Firestore
+            storyRef.set({
+                count: firebase.firestore.FieldValue.increment(1),
+                lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true }).then(() => {
+                // Mark as upvoted in localStorage
+                localStorage.setItem(`upvoted_${storyFolder}`, 'true');
+                
+                // Update UI
+                upvoteButton.classList.add('upvoted');
+                upvoteButton.disabled = true;
+                
+                // Add animation
+                upvoteButton.style.transform = 'scale(1.2)';
+                setTimeout(function() {
+                    upvoteButton.style.transform = 'scale(1)';
+                }, 200);
+            }).catch((error) => {
+                console.error('Error upvoting:', error);
+                alert('Failed to upvote. Please try again.');
+            });
+        });
+        
+    } catch (error) {
+        console.error('Error initializing Firebase upvote:', error);
+        upvoteButton.style.display = 'none';
+    }
 }
 
 // Initialize page

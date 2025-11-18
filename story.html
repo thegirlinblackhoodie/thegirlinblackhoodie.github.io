@@ -29,6 +29,24 @@
     <script type="application/ld+json" id="structured-data"></script>
     
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdDkWOFkzSTFk6AN2Z16erHrf_RH3hKfE",
+            authDomain: "thegirlinblackhoodie-b64d5.firebaseapp.com",
+            projectId: "thegirlinblackhoodie-b64d5",
+            storageBucket: "thegirlinblackhoodie-b64d5.firebasestorage.app",
+            messagingSenderId: "425886692266",
+            appId: "1:425886692266:web:980908fce852de7f35b1d3"
+        };
+        
+        // Make config available globally
+        window.firebaseConfig = firebaseConfig;
+    </script>
 </head>
 <body>
     <header class="site-header">
@@ -63,7 +81,7 @@
                 <div class="hashtags-section" id="hashtagsSection" style="display: none;"></div>
             </div>
             
-            <!-- Upvote Section -->
+            <!-- Firebase Upvote Section -->
             <div class="upvote-section">
                 <button id="upvoteButton" class="upvote-button">
                     <span class="upvote-icon">👍</span>
