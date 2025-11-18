@@ -118,8 +118,8 @@ async function loadStory() {
         // Update SEO meta tags and structured data
         updateSEO(story, storyFolder);
         
-        // Initialize Disqus comments
-        initializeDisqus(story, storyFolder);
+        // Initialize upvote system
+        initializeUpvote(storyFolder);
         
     } catch (error) {
         console.error('Error loading story:', error);
@@ -277,44 +277,45 @@ function updateSEO(story, storyFolder) {
     }
 }
 
-// Initialize Disqus comments with proper canonical URL and identifier
-function initializeDisqus(story, storyFolder) {
-    const baseUrl = 'https://thegirlinblackhoodie.github.io';
-    // Use canonical URL to prevent split threads (always use https and consistent format)
-    const canonicalUrl = `${baseUrl}/story.html?story=${encodeURIComponent(storyFolder)}`;
-    // Use the same URL as identifier for comment counts to work properly
-    // Disqus comment count script matches links by URL, so identifier should match URL
-    const pageIdentifier = canonicalUrl;
+// Initialize upvote system
+function initializeUpvote(storyFolder) {
+    const upvoteButton = document.getElementById('upvoteButton');
+    const upvoteCount = document.getElementById('upvoteCount');
     
-    // Configure Disqus with canonical URL and identifier
-    // This prevents split threads when the same content is accessed via different URLs
-    window.disqus_config = function () {
-        this.page.url = canonicalUrl; // Canonical URL (prevents http/https split threads)
-        this.page.identifier = pageIdentifier; // Use URL as identifier for comment counts
-        this.page.title = story.title;
-    };
+    if (!upvoteButton || !upvoteCount) return;
     
-    // Check if Disqus script is already loaded
-    const existingScript = document.querySelector('script[src*="disqus.com/embed.js"]');
+    // Get upvote count from localStorage
+    const storageKey = `upvotes_${storyFolder}`;
+    const hasUpvoted = localStorage.getItem(`upvoted_${storyFolder}`) === 'true';
+    let count = parseInt(localStorage.getItem(storageKey) || '0', 10);
     
-    if (typeof DISQUS !== 'undefined') {
-        // Disqus is already loaded, reset it with new config
-        DISQUS.reset({
-            reload: true,
-            config: function () {
-                this.page.url = canonicalUrl;
-                this.page.identifier = pageIdentifier;
-                this.page.title = story.title;
-            }
-        });
-    } else if (!existingScript) {
-        // Load Disqus script dynamically with proper configuration
-        var d = document, s = d.createElement('script');
-        s.src = 'https://thegirlinblackhoodie.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+    // Update UI
+    upvoteCount.textContent = count;
+    if (hasUpvoted) {
+        upvoteButton.classList.add('upvoted');
+        upvoteButton.disabled = true;
     }
-    // If script exists but DISQUS is not defined yet, it will load with the config we just set
+    
+    // Handle upvote click
+    upvoteButton.addEventListener('click', function() {
+        if (hasUpvoted) return;
+        
+        // Increment count
+        count++;
+        localStorage.setItem(storageKey, count.toString());
+        localStorage.setItem(`upvoted_${storyFolder}`, 'true');
+        
+        // Update UI
+        upvoteCount.textContent = count;
+        upvoteButton.classList.add('upvoted');
+        upvoteButton.disabled = true;
+        
+        // Add animation
+        upvoteButton.style.transform = 'scale(1.2)';
+        setTimeout(function() {
+            upvoteButton.style.transform = 'scale(1)';
+        }, 200);
+    });
 }
 
 // Initialize page

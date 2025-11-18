@@ -63,36 +63,18 @@
                 <div class="hashtags-section" id="hashtagsSection" style="display: none;"></div>
             </div>
             
-            <!-- Disqus Comments Section -->
-            <div id="disqus_thread" class="disqus-section"></div>
+            <!-- Upvote Section -->
+            <div class="upvote-section">
+                <button id="upvoteButton" class="upvote-button">
+                    <span class="upvote-icon">👍</span>
+                    <span class="upvote-count" id="upvoteCount">0</span>
+                </button>
+            </div>
         </div>
     </div>
     
     
-    <!-- Disqus Universal Embed Code -->
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-         *  See: https://help.disqus.com/en/articles/1717137-use-configuration-variables-to-avoid-split-threads-and-missing-comments
-         */
-        var disqus_config = function () {
-            // These will be set dynamically in story.js with canonical URL and unique identifier
-            // to prevent split threads and missing comments
-            this.page.url = window.location.href;
-            this.page.identifier = window.location.href;
-            this.page.title = document.title;
-        };
-        
-        // Disqus script will be loaded dynamically after story data is available
-        // This ensures proper canonical URL and identifier are set before Disqus loads
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
     <script src="story.js"></script>
-    
-    <!-- Disqus Comment Count Script -->
-    <script id="dsq-count-scr" src="//thegirlinblackhoodie.disqus.com/count.js" async></script>
 </body>
 </html>
 
