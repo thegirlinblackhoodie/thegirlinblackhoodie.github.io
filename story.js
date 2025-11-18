@@ -307,8 +307,15 @@ function initializeFirebaseUpvote(storyFolder) {
         const db = window.firestore;
         const storyRef = db.collection('upvotes').doc(storyFolder);
         
-        // Check if user has already upvoted (using localStorage)
+        // Simple approach: Use localStorage to prevent duplicate votes in same browser
+        // This is simpler and more privacy-friendly than browser fingerprinting
         const hasUpvoted = localStorage.getItem(`upvoted_${storyFolder}`) === 'true';
+        
+        // Set initial state
+        if (hasUpvoted) {
+            upvoteButton.classList.add('upvoted');
+            upvoteButton.disabled = true;
+        }
         
         // Load current upvote count and listen for real-time updates
         storyRef.onSnapshot((doc) => {
@@ -321,27 +328,23 @@ function initializeFirebaseUpvote(storyFolder) {
             console.error('Error loading upvotes:', error);
         });
         
-        // Set initial state
-        if (hasUpvoted) {
-            upvoteButton.classList.add('upvoted');
-            upvoteButton.disabled = true;
-        }
-        
         // Handle upvote click
         upvoteButton.addEventListener('click', function() {
             if (hasUpvoted) return;
+            
+            // Disable button immediately to prevent double-clicks
+            upvoteButton.disabled = true;
             
             // Increment count in Firestore
             storyRef.set({
                 count: firebase.firestore.FieldValue.increment(1),
                 lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true }).then(() => {
-                // Mark as upvoted in localStorage
+                // Mark as upvoted in localStorage (prevents duplicate votes in same browser)
                 localStorage.setItem(`upvoted_${storyFolder}`, 'true');
                 
                 // Update UI
                 upvoteButton.classList.add('upvoted');
-                upvoteButton.disabled = true;
                 
                 // Add animation
                 upvoteButton.style.transform = 'scale(1.2)';
@@ -350,6 +353,7 @@ function initializeFirebaseUpvote(storyFolder) {
                 }, 200);
             }).catch((error) => {
                 console.error('Error upvoting:', error);
+                upvoteButton.disabled = false; // Re-enable on error
                 alert('Failed to upvote. Please try again.');
             });
         });
