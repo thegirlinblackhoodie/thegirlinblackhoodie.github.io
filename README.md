@@ -1,14 +1,6 @@
 # thegirlinblackhoodie Blog
 
-A dark-themed personal blog built for GitHub Pages, featuring stories with a clean, minimalist design.
-
-## Features
-
-- **Dark Theme**: Beautiful dark background with brunette color highlights
-- **Auto-Discovery**: New story files are automatically added to the blog
-- **Image Gallery**: Stories can include images displayed alongside the content
-- **Hashtags**: Stories support hashtags for categorization
-- **SEO Optimized**: Meta tags, Open Graph tags, structured data (JSON-LD), sitemap.xml, and robots.txt for better search engine visibility
+A personal blog, featuring stories with a clean, minimalist design.
 
 ## Adding New Stories
 
@@ -119,7 +111,7 @@ Then open `http://localhost:8000` in your browser.
 
 ## Customization
 
-You can customize colors in `styles.css` by modifying the CSS variables:
+You can customize in `styles.css` by modifying the CSS variables:
 
 ```css
 :root {
@@ -154,5 +146,5 @@ The blog includes comprehensive SEO optimization:
 
 The sitemap is automatically regenerated when you run `generate-stories-index.js`.
 
-Enjoy sharing your stories! 📖
+Enjoy the stories! 📖
 
