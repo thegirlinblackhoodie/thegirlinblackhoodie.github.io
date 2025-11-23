@@ -82,6 +82,21 @@
     ]
   },
   {
+    "folder": "a_freshly_cooked_disaster",
+    "filename": "a_freshly_cooked_disaster.html",
+    "title": "A Freshly Cooked Disaster",
+    "date": "2024-05-31",
+    "hashtags": [
+      "curry",
+      "disaster",
+      "foodpoisoning"
+    ],
+    "images": [
+      "dinner_img1.png",
+      "dinner_img2.png"
+    ]
+  },
+  {
     "folder": "california_chicago_chaos_1",
     "filename": "california_chicago_chaos_1.html",
     "title": "California -> Chicago -> Chaos",
