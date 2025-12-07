@@ -1,0 +1,24 @@
+# Bravery Was Not Invited
+
+We had been in the US for barely a week, still strangers, still sleeping on the floor like refugees in our own apartment. Our backs finally revolted, so we decided: mattresses. Priority. Now.
+
+Someone told us about Carmona Mattress—apparently you could just call, order, and they’d deliver. But of course, we had that one person who insisted, “No, no, we must go in person and inspect the mattress” So five of us squeezed into a cab and went.
+
+The moment we entered the neighborhood, every instinct screamed NOPE. It was shady. Horror-movie shady. But we’d already paid for the cab, so we pushed ahead—because for Miss ‘I must touch the mattress’ money clearly mattered more than our collective survival.
+
+We got down. The shop was… closed. For lunch. We didn’t know when it would reopen. Creepy people were staring at us like we were at the buffet. One old lady with a cane kept circling us like a vulture doing cardio.
+
+One girl panicked and said she was leaving. She crossed the road on a red light like she had nothing left to lose. I decided I’d also leave—but like a law-abiding coward, I waited at the crosswalk for the walk sign.
+
+Suddenly, a tiny hand grabbed my arm. I almost fainted. It was one of the girls—also terrified—and she whispered, “I’ll come with you.” Honestly? Love didn’t bring us together. Mutual fear did.
+We tried going to a store. Shady. Tried going to a church. Also shady.
+By this time, the first girl was still outside the church because even God’s house looked suspicious here.
+
+Eventually we regrouped, booked a cab (20 minutes away), AND the mattress guy decided to appear at that exact moment. So we checked a mattress, pretended to be confident customers, and fled the moment the cab arrived.
+
+Later that night, we were laughing about the whole thing.
+ I told the girl who held my arm, “I’m so happy you came and held my hand.”
+ She got emotional, thinking I meant I felt brave and protective, that I was glad she trusted me to keep us safe.
+ But honestly? I was just relieved to discover I wasn’t the most scared person there.
+ Instant peace. Balance restored.
+

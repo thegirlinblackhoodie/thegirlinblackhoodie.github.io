@@ -154,5 +154,19 @@
       "img2.png",
       "img3.png"
     ]
+  },
+  {
+    "folder": "bravery_uninvited",
+    "filename": "bravery_uninvited.html",
+    "title": "Bravery Was Not Invited",
+    "date": "2022-08-15",
+    "hashtags": [
+      "bravery",
+      "mattress",
+      "firstWeekInTheUS"
+    ],
+    "images": [
+      "bni.png"
+    ]
   }
 ]
