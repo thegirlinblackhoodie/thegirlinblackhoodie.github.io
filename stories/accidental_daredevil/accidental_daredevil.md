@@ -1,0 +1,13 @@
+# The Accidental Daredevil
+
+I like to think of myself as adventurous. Reality, however, suggests I’m more like a magnet for “please don’t die” moments. 
+
+Take paragliding in India, for example. My first jump was pure bliss—wind in my hair, the world below me, a grin plastered on my face. The second time, a father-son duo went before me. The father’s chute didn’t open properly; he plummeted, barely saved by the staff, bleeding and terrified. His son refused to jump. Me? I hopped off the hill like it was a trampoline, only mid-air realizing maybe surviving the first jump was enough.
+
+Then there was California’s Great America. I climbed onto a roller coaster with 360-degree loops and noticed my harness wasn’t tight. I made the operator check it, but did I step off? Obviously No! Halfway through the loops, flailing upside down, I finally questioned my life choices. Clearly, my survival instinct was on vacation that day.
+
+Walking on a US sidewalk should have been safe. A car came speeding straight toward us. I genuinely believed it wouldn’t hit the sidewalk—footpaths are sacred, right? My friend yanked me out of the way, thinking I’d frozen in panic. Truth is, I wasn’t frozen; I was just stubbornly trusting the laws of sidewalks, ignoring my Indian brain where cars on footpaths are practically standard.
+
+Finally, paragliding in San Francisco felt magical… until I heard a click under my seat. Did I scream? Panic? No. Did I inform the Pilot with me? No! I squirmed a little, pretended to adjust myself, and continued smiling like nothing was wrong. Because what’s a little possible death when the view is spectacular?
+
+Sometimes I wonder if survival instincts exist—or if mine just run on extreme delay. Hopefully one day they’ll kick in before I accidentally stroll into heaven or hell by mistake—but knowing me, I’ll probably be asking for directions at the gate.
