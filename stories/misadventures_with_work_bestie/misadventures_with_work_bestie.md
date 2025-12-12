@@ -10,7 +10,7 @@ Five minutes in, someone in a golf cart started yelling. I genuinely prepared fo
 
 And then Monday arrived—fresh day, fresh chaos. Our offices track attendance through badge-ins. He, being an absolute gentleman and sweetheart, opened every single door for me all day—entrances, exits, everything. 
 
-It wasn’t until I got back to the hotel that night that I realized: I HADN'T BATCHED EVEN ONCE!!!
+It wasn’t until I got back to the hotel that night that I realized: I HADN'T BADGED EVEN ONCE!!!
 
 Which meant the system thinks I spent the whole day wafting around the building like a ghost.
 So even though I was in the office… I owed an extra in-person day.
