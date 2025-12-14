@@ -196,5 +196,19 @@
     "images": [
       "bni.png"
     ]
+  },
+  {
+    "folder": "the_great_wall_of_absolutely_unnecessary_fear",
+    "filename": "the_great_wall_of_absolutely_unnecessary_fear.html",
+    "title": "The Great Wall of Absolutely Unnecessary Fear",
+    "date": "2018-01-01",
+    "hashtags": [
+      "thewall",
+      "fear",
+      "bestguys"
+    ],
+    "images": [
+      "imgwallfear.png"
+    ]
   }
 ]
