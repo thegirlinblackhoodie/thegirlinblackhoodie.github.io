@@ -107,8 +107,17 @@ async function loadStory() {
             contentElement.innerHTML = htmlContent;
         }
         
-        // Load and display images in the right column
-        await loadStoryImages(storyFolder);
+        // Video-center layout: single column with content (e.g. mp4) centered
+        const mainLayout = document.querySelector('.story-main-layout');
+        const imagesWrapper = document.getElementById('storyImagesGallery')?.closest('.story-images-wrapper');
+        if (storyFolder === 'dark_chocolate' && mainLayout) {
+            mainLayout.classList.add('story-layout-video-center');
+            if (imagesWrapper) imagesWrapper.style.display = 'none';
+        } else {
+            mainLayout?.classList.remove('story-layout-video-center');
+            if (imagesWrapper) imagesWrapper.style.display = '';
+            await loadStoryImages(storyFolder);
+        }
         
         // Display hashtags from metadata
         if (story.hashtags && story.hashtags.length > 0) {

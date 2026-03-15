@@ -337,6 +337,76 @@ body:has(.site-header) {
     font-family: 'Georgia', 'Times New Roman', serif;
 }
 
+/* Story music/video player (no autoplay; user clicks to play/pause) */
+.story-content .story-audio-player {
+    margin: 1.5rem 0;
+}
+.story-content .story-audio-player .dark-chocolate-video {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 8px;
+    border: 1px solid var(--brunette);
+    background: rgba(10, 10, 10, 0.9);
+}
+.story-content .story-audio-player .player-hint {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--brunette-light);
+    opacity: 0.9;
+}
+.story-content .story-audio-player .player-disclaimer {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--brunette-light);
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Video-center layout: single column, video centered (e.g. dark_chocolate) */
+.story-main-layout.story-layout-video-center {
+    grid-template-columns: 1fr;
+    max-width: 420px; /* ~iPhone 12 size + padding */
+    margin-left: auto;
+    margin-right: auto;
+}
+.story-main-layout.story-layout-video-center .story-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.story-main-layout.story-layout-video-center .story-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.story-content .story-video-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.story-content .story-video-center .story-center-video {
+    width: 100%;
+    max-width: 360px; /* iPhone 12 portrait width */
+    max-height: 600px;
+    border-radius: 12px;
+    border: 1px solid var(--brunette);
+    background: #000;
+    box-shadow: 0 8px 30px rgba(139, 111, 71, 0.2);
+}
+.story-content .story-video-center .story-video-disclaimer {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--brunette);
+    opacity: 0.9;
+    font-style: italic;
+    text-align: center;
+}
+
 .story-images-wrapper {
     /* Images scroll with the story content */
 }

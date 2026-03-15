@@ -1,5 +1,16 @@
 [
   {
+    "folder": "dark_chocolate",
+    "filename": "dark_chocolate.html",
+    "title": "Dark Chocolate",
+    "date": "2026-02-16",
+    "hashtags": [
+      "darkchocolate",
+      "music"
+    ],
+    "images": []
+  },
+  {
     "folder": "comedy_show",
     "filename": "comedy_show.html",
     "title": "Laughing Through the Pain (Literally)",
@@ -8,7 +19,8 @@
       "comedy",
       "pain",
       "maxamini",
-      "late"
+      "late",
+      "laugh"
     ],
     "images": [
       "comedy.png"
