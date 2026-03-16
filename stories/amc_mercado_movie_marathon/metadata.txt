@@ -1,3 +1,3 @@
-title=Movie Marathon at AMC Mercado.
+title=Movie Marathon at AMC Mercado
 hashtags=movie_marathon, amc, mercado, bad_choices, best_seats
 date=15-03-2026
