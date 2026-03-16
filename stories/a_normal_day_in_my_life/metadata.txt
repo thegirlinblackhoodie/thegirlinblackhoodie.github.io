@@ -1,0 +1,3 @@
+title=A Normal Day in my Life
+hashtags=normal, crazy, unfruitful, crazy
+date=12-04-2025

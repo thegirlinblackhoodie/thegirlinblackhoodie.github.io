@@ -154,6 +154,21 @@
     ]
   },
   {
+    "folder": "a_normal_day_in_my_life",
+    "filename": "normal_day.html",
+    "title": "A Normal Day in my Life",
+    "date": "2025-04-12",
+    "hashtags": [
+      "normal",
+      "crazy",
+      "unfruitful",
+      "crazy"
+    ],
+    "images": [
+      "normalday.png"
+    ]
+  },
+  {
     "folder": "hike_a_survival_mission",
     "filename": "hike_a_survival_mission.html",
     "title": "The Hike That Turned Into a Survival Mission",
