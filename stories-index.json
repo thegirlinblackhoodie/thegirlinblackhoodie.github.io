@@ -1,5 +1,21 @@
 [
   {
+    "folder": "amc_mercado_movie_marathon",
+    "filename": "movie_marathon.html",
+    "title": "Movie Marathon at AMC Mercado.",
+    "date": "2026-03-15",
+    "hashtags": [
+      "movie_marathon",
+      "amc",
+      "mercado",
+      "bad_choices",
+      "best_seats"
+    ],
+    "images": [
+      "mercado.png"
+    ]
+  },
+  {
     "folder": "dark_chocolate",
     "filename": "dark_chocolate.html",
     "title": "Dark Chocolate",
