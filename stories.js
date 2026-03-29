@@ -54,22 +54,9 @@ async function loadStories() {
         
         stories.forEach(story => {
             const storyCard = document.createElement('a');
-            // Use canonical URL for story links
-            const baseUrl = 'https://thegirlinblackhoodie.github.io';
-            const canonicalUrl = `${baseUrl}/story.html?story=${encodeURIComponent(story.folder)}`;
-            storyCard.href = canonicalUrl;
+            // Relative URL so local dev (any host: localhost, LAN IP, etc.) stays on the same origin
+            storyCard.href = `story.html?story=${encodeURIComponent(story.folder)}`;
             storyCard.className = 'story-card';
-            
-            // For local development, intercept clicks and use relative URL
-            storyCard.addEventListener('click', function(e) {
-                // Check if we're on localhost
-                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-                    e.preventDefault();
-                    const relativeUrl = `story.html?story=${encodeURIComponent(story.folder)}`;
-                    window.location.href = relativeUrl;
-                }
-                // On production (GitHub Pages), let the link work normally
-            });
             
             // Parse date string (YYYY-MM-DD) to avoid timezone issues
             const dateParts = story.date.split('-');
