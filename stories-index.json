@@ -1,9 +1,23 @@
 [
   {
+    "folder": "groceries_not_meant_to_be",
+    "filename": "groceries_not_meant_to_be.html",
+    "title": "Groceries Not Meant To Be!",
+    "date": "2026-05-22",
+    "hashtags": [
+      "groceries",
+      "scavengerhunt",
+      "midnight"
+    ],
+    "images": [
+      "groceries.png"
+    ]
+  },
+  {
     "folder": "chaos_content",
     "filename": "chaos_content.html",
     "title": "Chaos Finds Me. Content Follows.",
-    "date": "2026-08-04",
+    "date": "2026-04-08",
     "hashtags": [
       "chaos",
       "dream",

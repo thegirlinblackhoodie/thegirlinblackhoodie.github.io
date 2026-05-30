@@ -1,0 +1,3 @@
+title=Groceries Not Meant To Be!
+hashtags=groceries, scavengerhunt, midnight
+date=22-05-2026
