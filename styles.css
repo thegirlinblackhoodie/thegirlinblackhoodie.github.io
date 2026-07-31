@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 140px; /* room for fixed footer */
 }
 
 /* Home page - center content vertically */
@@ -512,12 +513,18 @@ body:has(.site-header) {
 
 /* Site Footer */
 .site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
     width: 100%;
-    margin-top: auto;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     border-top: 1px solid var(--brunette);
-    background: rgba(10, 10, 10, 0.5);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .show-love-section {
@@ -636,6 +643,11 @@ body:has(.site-header) {
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
+        padding-bottom: 160px;
+    }
+    
+    .site-footer {
+        padding: 0.8rem 1rem;
     }
     
     .site-header {
