@@ -1,5 +1,42 @@
 [
   {
+    "folder": "i_have_real_friends_yes_i_do",
+    "filename": "i_have_real_friends_yes_i_do.html",
+    "title": "I Have Real Friends. Yes, I Do.",
+    "date": "2026-07-31",
+    "hashtags": [
+      "friends",
+      "bayarea",
+      "sarcasm",
+      "loneliness",
+      "birthday",
+      "coldplay",
+      "hiking",
+      "friendship"
+    ],
+    "images": [
+      "real_friends.png"
+    ]
+  },
+  {
+    "folder": "what_do_these_dreams_mean",
+    "filename": "what_do_these_dreams_mean.html",
+    "title": "A Night of Strange Dreams",
+    "date": "2026-05-26",
+    "hashtags": [
+      "dreams",
+      "nightmares",
+      "lions",
+      "rollerblader",
+      "overthinking",
+      "subconscious",
+      "bangalore"
+    ],
+    "images": [
+      "dreams.png"
+    ]
+  },
+  {
     "folder": "groceries_not_meant_to_be",
     "filename": "groceries_not_meant_to_be.html",
     "title": "Groceries Not Meant To Be!",
