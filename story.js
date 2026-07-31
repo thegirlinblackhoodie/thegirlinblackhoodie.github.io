@@ -110,9 +110,13 @@ async function loadStory() {
         // Video-center layout: single column with content (e.g. mp4) centered
         const mainLayout = document.querySelector('.story-main-layout');
         const imagesWrapper = document.getElementById('storyImagesGallery')?.closest('.story-images-wrapper');
-        if (storyFolder === 'dark_chocolate' && mainLayout) {
+        const isVideoStory = !!contentElement.querySelector('.story-video-center, video.story-center-video');
+        if (isVideoStory && mainLayout) {
             mainLayout.classList.add('story-layout-video-center');
-            if (imagesWrapper) imagesWrapper.style.display = 'none';
+            if (imagesWrapper) {
+                imagesWrapper.style.display = 'none';
+                imagesWrapper.innerHTML = '';
+            }
         } else {
             mainLayout?.classList.remove('story-layout-video-center');
             if (imagesWrapper) imagesWrapper.style.display = '';

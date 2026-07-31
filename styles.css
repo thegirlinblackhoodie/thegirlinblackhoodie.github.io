@@ -370,6 +370,9 @@ body:has(.site-header) {
     margin-left: auto;
     margin-right: auto;
 }
+.story-main-layout.story-layout-video-center .story-images-wrapper {
+    display: none !important;
+}
 .story-main-layout.story-layout-video-center .story-content-wrapper {
     display: flex;
     justify-content: center;
